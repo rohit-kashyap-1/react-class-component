@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class ToDoList extends Component {
     constructor(props){
         super(props)
-        this.state = {items:['test','demo'],value:""}
+        this.state = {items:[],value:""}
     }
 
     handleAdd  = () =>{
@@ -30,9 +30,12 @@ export default class ToDoList extends Component {
                                 <button className='btn btn-primary' onClick={this.handleAdd}>Add Item</button>
                             </div>
                             <ul className='list-group' >
-                                {this.state.items.map((item)=>{
-                                    <li className='list-group-item'>The first list item</li>
-                                })}
+                              
+                                {this.state.items!=null? this.state.items.map((item,index)=>{
+                                    return (
+                                        <li className='list-group-item' key={index}>{item}</li>
+                                    )
+                                }):''}
                             </ul>
                         </div>
                     </div>
