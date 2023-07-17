@@ -28,7 +28,7 @@ export default class ToDoList extends Component {
                             <div className='mb-3'>
                                 <input type='text' className='form-control mb-3' placeholder='Enter todo' value={this.state.value} onChange={this.handleInput} />
                                 <button className='btn btn-primary' onClick={this.handleAdd}>Add Item</button>
-                            </div>
+                            </div> 
                             <ul className='list-group' >
                               
                                 {this.state.items!=null? this.state.items.map((item,index)=>{
