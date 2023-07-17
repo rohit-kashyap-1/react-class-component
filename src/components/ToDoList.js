@@ -17,6 +17,9 @@ export default class ToDoList extends Component {
         this.setState({value:value})
         
     }
+    handleDelete = (e)=>{
+        console.log('deleted')
+    }
     render() {
         return (
             <section className='pt-5'>
@@ -32,7 +35,7 @@ export default class ToDoList extends Component {
                               
                                 {this.state.items!=null? this.state.items.map((item,index)=>{
                                     return (
-                                        <li className='list-group-item d-flex align-items-center justify-content-between' key={index}>{item} <button className='btn btn-sm btn-danger'>Delete</button></li>
+                                        <li className='list-group-item d-flex align-items-center justify-content-between' key={index}>{item} <button className='btn btn-sm btn-danger' onClick={this.handleDelete}>Delete</button></li>
                                     )
                                 }):''}
                             </ul>
