@@ -22,9 +22,8 @@ export default class ToDoList extends Component {
             <section className='pt-5'>
                 <div className='container'>
                     <h2>To do list in class component</h2>
-                    <div className='row'>
+                    <div className='row'> 
                         <div className='col-md-4'>
-
                             <div className='mb-3'>
                                 <input type='text' className='form-control mb-3' placeholder='Enter todo' value={this.state.value} onChange={this.handleInput} />
                                 <button className='btn btn-primary' onClick={this.handleAdd}>Add Item</button>
