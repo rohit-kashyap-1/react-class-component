@@ -1,11 +1,6 @@
 
 import './App.css';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Main from './components/Main';
-
-import Counter from './components/Counter';
-
+import ToDoList from './components/ToDoList';
 
 
 //use effect =  re rendering
@@ -15,11 +10,7 @@ import Counter from './components/Counter';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <Main />
-     
-      <Counter />
+      <ToDoList />
       
     </div>
   );
